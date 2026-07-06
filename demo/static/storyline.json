@@ -1,0 +1,33 @@
+{
+  "title": "Release Readiness",
+  "description": "A small static feed showing the intended JSON-first Storyline contract.",
+  "chart": {
+    "yLabel": "Completion"
+  },
+  "points": [
+    { "x": "2026-01-01", "y": 12, "label": "Jan" },
+    { "x": "2026-02-01", "y": 24, "label": "Feb" },
+    { "x": "2026-03-01", "y": 38, "label": "Mar" },
+    { "x": "2026-04-01", "y": 51, "label": "Apr" },
+    { "x": "2026-05-01", "y": 69, "label": "May" },
+    { "x": "2026-06-01", "y": 84, "label": "Jun" },
+    { "x": "2026-07-01", "y": 96, "label": "Jul" }
+  ],
+  "cards": [
+    {
+      "point": 1,
+      "title": "JSON contract drafted",
+      "text": "The renderer consumes a stable feed shape instead of spreadsheet-specific data."
+    },
+    {
+      "point": 4,
+      "title": "Symfony producer ready",
+      "text": "API Platform or a controller can emit this feed without changing the browser component."
+    },
+    {
+      "point": 6,
+      "title": "AssetMapper path",
+      "text": "The package can be imported from jsDelivr by Symfony importmap without a local Node build."
+    }
+  ]
+}

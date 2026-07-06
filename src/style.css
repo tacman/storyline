@@ -1,0 +1,90 @@
+.storyline {
+  color: #202733;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.storyline__header {
+  margin-bottom: 18px;
+}
+
+.storyline__header h2 {
+  margin: 0 0 6px;
+  font-size: 26px;
+  line-height: 1.15;
+}
+
+.storyline__header p {
+  margin: 0;
+  color: #586273;
+  line-height: 1.45;
+}
+
+.storyline__chart {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: #fbfcfe;
+  border: 1px solid #d9e0ea;
+  border-radius: 8px;
+}
+
+.storyline__axis line {
+  stroke: #b8c1ce;
+  stroke-width: 1;
+}
+
+.storyline__line {
+  fill: none;
+  stroke: #245d7c;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 3;
+}
+
+.storyline__marker {
+  fill: #ffffff;
+  stroke: #bf3f3f;
+  stroke-width: 3;
+}
+
+.storyline__tick {
+  fill: #667085;
+  font-size: 14px;
+}
+
+.storyline__cards {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  margin: 18px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.storyline__card {
+  border-left: 4px solid #bf3f3f;
+  background: #ffffff;
+  box-shadow: 0 1px 6px rgb(32 39 51 / 12%);
+  padding: 14px 16px;
+}
+
+.storyline__card time {
+  display: block;
+  margin-bottom: 8px;
+  color: #667085;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.storyline__card h3 {
+  margin: 0 0 8px;
+  font-size: 17px;
+  line-height: 1.25;
+}
+
+.storyline__card p {
+  margin: 0;
+  color: #3f4857;
+  line-height: 1.45;
+}

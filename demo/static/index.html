@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Storyline static JSON demo</title>
+  <link rel="stylesheet" href="/src/style.css">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: #f4f7fa;
+      color: #202733;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    main {
+      width: min(1040px, 100%);
+      margin: 0 auto;
+      padding: 28px 18px 40px;
+    }
+
+    .demo-header {
+      margin-bottom: 20px;
+    }
+
+    .demo-header h1 {
+      margin: 0 0 8px;
+      font-size: 30px;
+      line-height: 1.15;
+    }
+
+    .demo-header p {
+      margin: 0;
+      color: #586273;
+      line-height: 1.45;
+    }
+
+    #storyline {
+      background: #ffffff;
+      border: 1px solid #d9e0ea;
+      border-radius: 8px;
+      padding: 20px;
+    }
+
+    .error {
+      color: #8a1f1f;
+      background: #fff1f1;
+      border: 1px solid #f1b4b4;
+      border-radius: 8px;
+      padding: 14px;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header class="demo-header">
+      <h1>Storyline static JSON demo</h1>
+      <p>This page uses native browser modules and fetches a local JSON feed. No bundler, Vite, or npm install is required. <a href="https://github.com/tacman/storyline">View on GitHub</a>.</p>
+    </header>
+
+    <div id="storyline"></div>
+  </main>
+
+  <script type="module">
+    import { loadStoryline } from '/src/index.js';
+
+    try {
+      await loadStoryline('#storyline', './storyline.json');
+    } catch (error) {
+      document.querySelector('#storyline').innerHTML = `<div class="error">${error.message}</div>`;
+      console.error(error);
+    }
+  </script>
+</body>
+</html>
